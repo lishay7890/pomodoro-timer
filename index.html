@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pomodoro Timer</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="pomodoro-container">
+
+        <header class="header">
+            <h1>Pomodoro Timer</h1>
+            <p>Stay focused and productive</p>
+        </header>
+
+        <nav class="session-tabs" aria-label="Timer session type">
+            <button id="workBtn" class="session-btn active">
+                Work
+            </button>
+
+            <button id="shortBreakBtn" class="session-btn">
+                Short Break
+            </button>
+
+            <button id="longBreakBtn" class="session-btn">
+                Long Break
+            </button>
+        </nav>
+
+        <section class="timer-section">
+
+            <p id="sessionType">Work</p>
+
+            <div class="timer" id="timer" aria-live="polite">
+                25:00
+            </div>
+
+            <div class="controls">
+
+                <button id="startBtn" class="control-btn">
+                    Start
+                </button>
+
+                <button id="pauseBtn" class="control-btn" disabled>
+                    Pause
+                </button>
+
+                <button id="resetBtn" class="control-btn">
+                    Reset
+                </button>
+
+            </div>
+
+        </section>
+
+        <section class="sessions">
+
+            <h2>Completed Sessions</h2>
+
+            <div class="session-count" id="sessionCount">
+                0
+            </div>
+
+        </section>
+
+        <section class="settings">
+
+            <h2>Timer Settings</h2>
+
+            <div class="settings-group">
+
+                <label for="workTime">
+                    Work (minutes)
+                </label>
+
+                <input
+                    type="number"
+                    id="workTime"
+                    value="25"
+                    min="1"
+                    max="60"
+                >
+
+            </div>
+
+            <div class="settings-group">
+
+                <label for="shortBreakTime">
+                    Short Break (minutes)
+                </label>
+
+                <input
+                    type="number"
+                    id="shortBreakTime"
+                    value="5"
+                    min="1"
+                    max="30"
+                >
+
+            </div>
+
+            <div class="settings-group">
+
+                <label for="longBreakTime">
+                    Long Break (minutes)
+                </label>
+
+                <input
+                    type="number"
+                    id="longBreakTime"
+                    value="15"
+                    min="1"
+                    max="60"
+                >
+
+            </div>
+
+            <button id="saveSettingsBtn" class="save-btn">
+                Save Settings
+            </button>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
