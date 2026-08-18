@@ -1,0 +1,317 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   BODY
+========================= */
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: linear-gradient(
+        135deg,
+        #667eea,
+        #764ba2
+    );
+
+    padding: 20px;
+}
+
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.pomodoro-container {
+    width: 100%;
+    max-width: 550px;
+
+    background: #ffffff;
+
+    border-radius: 20px;
+
+    padding: 30px;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+
+    text-align: center;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header h1 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.header p {
+    color: #777;
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   SESSION TABS
+========================= */
+
+.session-tabs {
+    display: flex;
+    gap: 10px;
+
+    margin-bottom: 30px;
+}
+
+.session-btn {
+    flex: 1;
+
+    padding: 12px 10px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #eeeeee;
+
+    color: #555;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+.session-btn:hover {
+    background: #dddddd;
+}
+
+.session-btn.active {
+    background: #667eea;
+    color: white;
+}
+
+
+/* =========================
+   TIMER
+========================= */
+
+.timer-section {
+    margin-bottom: 30px;
+}
+
+#sessionType {
+    font-size: 20px;
+    font-weight: bold;
+
+    color: #667eea;
+
+    margin-bottom: 10px;
+}
+
+.timer {
+    font-size: 80px;
+    font-weight: bold;
+
+    color: #333;
+
+    margin: 15px 0 25px;
+}
+
+
+/* =========================
+   CONTROLS
+========================= */
+
+.controls {
+    display: flex;
+    justify-content: center;
+
+    gap: 10px;
+}
+
+.control-btn {
+    padding: 12px 22px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #667eea;
+
+    color: white;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.control-btn:hover:not(:disabled) {
+    background: #5568d9;
+
+    transform: translateY(-2px);
+}
+
+.control-btn:disabled {
+    opacity: 0.5;
+
+    cursor: not-allowed;
+}
+
+
+/* =========================
+   SESSIONS
+========================= */
+
+.sessions {
+    margin: 30px 0;
+
+    padding: 20px;
+
+    background: #f5f6fa;
+
+    border-radius: 12px;
+}
+
+.sessions h2 {
+    font-size: 18px;
+
+    color: #444;
+
+    margin-bottom: 10px;
+}
+
+.session-count {
+    font-size: 35px;
+
+    font-weight: bold;
+
+    color: #667eea;
+}
+
+
+/* =========================
+   SETTINGS
+========================= */
+
+.settings {
+    text-align: left;
+
+    padding: 20px;
+
+    border: 1px solid #eeeeee;
+
+    border-radius: 12px;
+}
+
+.settings h2 {
+    text-align: center;
+
+    margin-bottom: 20px;
+
+    color: #444;
+}
+
+.settings-group {
+    margin-bottom: 15px;
+}
+
+.settings-group label {
+    display: block;
+
+    margin-bottom: 6px;
+
+    font-size: 14px;
+
+    color: #555;
+}
+
+.settings-group input {
+    width: 100%;
+
+    padding: 10px;
+
+    border: 1px solid #cccccc;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+}
+
+.save-btn {
+    width: 100%;
+
+    padding: 12px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #667eea;
+
+    color: white;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.save-btn:hover {
+    background: #5568d9;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 10px;
+    }
+
+    .pomodoro-container {
+        padding: 20px;
+    }
+
+    .header h1 {
+        font-size: 26px;
+    }
+
+    .session-tabs {
+        flex-direction: column;
+    }
+
+    .timer {
+        font-size: 60px;
+    }
+
+    .controls {
+        flex-wrap: wrap;
+    }
+
+    .control-btn {
+        flex: 1;
+        min-width: 100px;
+    }
+}
